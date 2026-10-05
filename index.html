@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5f9ff" />
+
+  <title>Happy Birthday, Dennise ♡</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=DM+Sans:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Background -->
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <div class="grain"></div>
+
+
+  <main>
+
+    <!-- =========================
+         LANDING SCREEN
+    ========================== -->
+
+    <section
+      id="landing"
+      class="screen active"
+      aria-labelledby="landingTitle"
+    >
+
+      <div class="landing-inner">
+
+        <p class="eyebrow">
+          A little something, written at midnight
+        </p>
+
+        <div class="heart-wrap" aria-hidden="true">
+          <span>♥</span>
+        </div>
+
+        <p class="top-message">
+          Happy Birthday, Dennise!
+        </p>
+
+        <h1 id="landingTitle">
+          A little letter
+          <br>
+          <em>for you.</em>
+        </h1>
+
+        <p class="landing-copy">
+          Some things are easier to write down than to say out loud.
+        </p>
+
+        <button
+          id="startBtn"
+          class="pill-btn"
+          type="button"
+        >
+          OPEN
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         BIRTHDAY SCREEN
+    ========================== -->
+
+    <section
+      id="birthday"
+      class="screen"
+      aria-labelledby="birthdayTitle"
+    >
+
+      <div class="birthday-content">
+
+        <div class="mini-label">
+          06 • 10 • 2026
+        </div>
+
+        <h2 id="birthdayTitle">
+          Happy Birthday, Dennise.
+        </h2>
+
+        <p class="birthday-sub">
+          Here’s to another year of becoming more you.
+        </p>
+
+
+        <!-- PHOTO -->
+
+        <div class="photo-and-heart">
+
+          <div class="photo-frame">
+
+            <img
+              id="profilePhoto"
+              src="assets/images/lili.jpg"
+              alt="Camiyah"
+            />
+
+            <div
+              class="photo-fallback"
+              id="photoFallback"
+              style="display: none;"
+            >
+              <span class="photo-icon">♡</span>
+              <span>Your photo goes here</span>
+              <small>assets/images/lili.jpg</small>
+            </div>
+
+            <div class="tape tape-left"></div>
+            <div class="tape tape-right"></div>
+
+          </div>
+
+
+          <!-- LITTLE HEARTS -->
+
+          <div
+            class="floating-heart heart-a"
+            aria-hidden="true"
+          >
+            ♡
+          </div>
+
+          <div
+            class="floating-heart heart-b"
+            aria-hidden="true"
+          >
+            ♥
+          </div>
+
+          <div
+            class="floating-heart heart-c"
+            aria-hidden="true"
+          >
+            ♡
+          </div>
+
+        </div>
+
+
+        <!-- LETTER BUTTON -->
+
+        <div
+          class="letter-entry"
+          id="letterEntry"
+        >
+
+          <!-- Kept empty for JavaScript compatibility -->
+          <div
+            class="cat-garden"
+            aria-hidden="true"
+          ></div>
+
+          <button
+            id="messageBtn"
+            class="pill-btn"
+            type="button"
+          >
+            Read your letter
+            <span>→</span>
+          </button>
+
+          <p class="hint">
+            there’s music here too. turn it on when you’re ready.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       MUSIC PLAYER
+  ========================== -->
+
+  <div
+    class="music-player"
+    id="musicPlayer"
+    aria-label="Birthday music controls"
+  >
+
+    <button
+      id="musicBtn"
+      class="music-btn"
+      type="button"
+      aria-label="Play music"
+    >
+      <span class="music-disc">♫</span>
+    </button>
+
+    <div class="music-info">
+
+      <span class="music-label">
+        taylor swift
+      </span>
+
+      <span class="music-title">
+        Style
+      </span>
+
+    </div>
+
+    <div
+      class="equalizer"
+      id="equalizer"
+      aria-hidden="true"
+    >
+      <i></i>
+      <i></i>
+      <i></i>
+      <i></i>
+    </div>
+
+    <audio
+      id="birthdayAudio"
+      preload="metadata"
+    >
+      <source
+        src="assets/music/style.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+
+  </div>
+
+
+  <!-- =========================
+       LETTER MODAL
+  ========================== -->
+
+  <div
+    id="messageModal"
+    class="modal"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="cardTitle"
+  >
+
+    <div class="card">
+
+      <button
+        class="close"
+        id="closeBtn"
+        type="button"
+        aria-label="Close letter"
+      >
+        ×
+      </button>
+
+
+      <div class="card-topline">
+        A special birthday wish for
+      </div>
+
+      <h2 id="cardTitle">
+        You, Dennise.
+      </h2>
+
+
+      <!-- =========================
+           LETTER
+      ========================== -->
+
+      <div class="letter">
+
+        <p>
+          Happy Birthday, Dennise. ♡
+        </p>
+
+        <p>
+          I think I’ve been thinking about what I wanted to say to you for a while now, and honestly, I still don’t know if there’s a perfect way to put everything into words. But since it’s your birthday, I wanted to take the time to actually write something that feels honest, something that came from me and not just something I say because it’s what people usually say on birthdays.
+        </p>
+
+        <p>
+          I don’t know where this goes. I really don’t. And maybe that’s one of the things that makes me want to know more. I don’t know where my decisions right now will take me, or what God has planned for both of us, but I think a part of me is willing to wait and see. I want to know where this goes, even if I can’t promise what the ending looks like. Maybe I don’t need to know yet.
+        </p>
+
+        <p>
+          What I do know is that I want you to have a good year ahead of you. Especially with college. I know there will be days when everything feels too much, when requirements pile up, when you question whether you’re doing enough, or when you just feel tired of having to keep up with everything. I hope you remember that you don’t have to have everything figured out all at once. You’re allowed to take your time. You’re allowed to rest. You’re allowed to have days where all you can do is get through the day, and that still counts.
+        </p>
+
+        <p>
+          And please take care of yourself, too. I know there are times when you barely eat properly because you can’t really force yourself to, and I hope you know that you deserve to be taken care of even on the days when you don’t have the energy to take care of yourself. Please eat when you can, rest when you need to, and don’t be too hard on yourself for the things you can’t always control. You don’t have to earn the right to care for yourself.
+        </p>
+
+        <p>
+          I also hope things become lighter for you and your family. I may not know every single thing that happens behind closed doors, but I know how much the people we love can affect the way we carry ourselves. So I hope your family gets more peaceful days, more reasons to laugh together, and more moments where you can simply be with them without having to worry about everything else.
+        </p>
+
+        <p>
+          But more than anything, I hope you become kinder to yourself.
+        </p>
+
+        <p>
+          Not the version of you that has to be strong all the time. Not the version that has to keep everyone else okay. Not the version that has to be productive, composed, or certain about where her life is going. Just you. The person underneath all of that.
+        </p>
+
+        <p>
+          I hope you get to know yourself more this year. I hope you discover things about yourself that make you proud. I hope you learn that you can change your mind, outgrow things, make mistakes, start again, and still be deserving of love and good things. I hope you never feel like you have to become someone else just to be enough.
+        </p>
+
+        <p>
+          And if I’m being completely honest, I think that’s also something I want to see for you. I want to see who you become, not because I expect you to become a certain person, but because I genuinely wonder where life will take you. I want to know what kind of person you’ll be a year from now, what you’ll learn, what you’ll love, what you’ll leave behind, and what you’ll choose to keep.
+        </p>
+
+        <p>
+          Maybe that’s why I keep thinking about where this goes.
+        </p>
+
+        <p>
+          I don’t know what we’re going to become. I don’t know if the things I’m feeling now will stay the same, or if life will eventually lead us somewhere completely different. But tonight, on your birthday, I just want you to know that I’m here, and I’m willing to see where this takes us. No pressure, no promises that I can’t make. Just an honest willingness to know you a little more and to let things unfold in their own time.
+        </p>
+
+        <p>
+          I hope this new chapter is gentle with you, Dennise. I hope college brings you not only achievements, but also memories you’ll actually want to keep. I hope your family stays safe and well. I hope you learn to nourish yourself, in every sense of the word. And I hope you never forget that your existence itself is something worth taking care of.
+        </p>
+
+        <p class="closing">
+          Happy Birthday, Dennise.
+        </p>
+
+        <p>
+          I hope 18 treats you kindly. And whatever happens after tonight, I hope you know that somewhere along the way, you became someone I genuinely wanted to understand, not just someone I wanted to know.
+        </p>
+
+        <p>
+          Here’s to another year of you. And maybe, if God allows it, to finding out where this goes. ♡
+        </p>
+
+      </div>
+
+
+      <!-- =========================
+           SIGNATURE
+      ========================== -->
+
+      <div class="signature">
+        With love,
+        <br>
+        <strong>Camiyah Lei</strong>
+      </div>
+
+      <div class="card-footer">
+        p.s. please take care of yourself, okay?
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+
+</html>
